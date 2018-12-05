@@ -1,7 +1,9 @@
 # zerome2md - dump ZeroMe posts to markdown
 
 This tool dumps ZeroMe posts to a markdown file,
-so you can publish it somewhere else.
+so you can use it somewhere else
+(for example, to be consumed by a static site generator,
+or just for backup).
 
 Currently only support dump posts,
 not comments.
