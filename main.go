@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"github.com/weakish/goaround"
 	"io/ioutil"
-	"os"
 	"time"
 )
 
@@ -17,7 +16,7 @@ type post struct {
 }
 
 func main() {
-	bytes, err := ioutil.ReadAll(os.Stdin)
+	bytes, err := ioutil.ReadFile("data.json")
 	goaround.PanicIf(err)
 
 	var user map[string]json.RawMessage
