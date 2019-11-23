@@ -28,7 +28,7 @@ Check your ZeroMe url, e.g.
 http://127.0.0.1:43110/Me.ZeroNetwork.bit/?Profile/HUBID/USERID/yourid@zeroid.bit
 
 Then you should run `zerome2md` under
-`ZeroNet/data/HUBID/data/user/USERID`
+`ZeroNet/data/HUBID/data/users/USERID`
 
 ## License
 
