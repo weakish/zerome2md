@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/weakish/goaround"
 	"github.com/weakish/gosugar"
 	"io/ioutil"
 	"path/filepath"
@@ -20,17 +19,15 @@ type post struct {
 }
 
 func main() {
-	bytes, err := ioutil.ReadFile("data.json")
-	goaround.PanicIf(err)
+	bytes, _ := ioutil.ReadFile("data.json")
 
 	var user map[string]json.RawMessage
-	goaround.PanicIf(json.Unmarshal(bytes, &user))
+	_ = json.Unmarshal(bytes, &user)
 	var posts []post
-	goaround.PanicIf(json.Unmarshal(user["post"], &posts))
+	_ = json.Unmarshal(user["post"], &posts)
 
 	var images []string
-	images, err = filepath.Glob("*.jpg")
-	goaround.PanicIf(err)
+	images, _ = filepath.Glob("*.jpg")
 
 	var imageIds gosugar.StringSet = gosugar.NewStringSet()
 	for _, image := range images {
